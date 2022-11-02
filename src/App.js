@@ -6,9 +6,13 @@ class App extends Component {
     return <h1>Our U_code staff are Lotem and Ameer</h1>;
   }
 
-  getMorningGreeting() {}
+  getMorningGreeting() {
+    return <div>Good Morning</div>;
+  }
 
-  getEveningGreeting() {}
+  getEveningGreeting() {
+    return <div>Good Evening</div>;
+  }
 
   showCompany(name, revenue) {}
 
@@ -33,7 +37,9 @@ class App extends Component {
         <div className="ex-space">
           <h4 className="ex-title">Spot-check 2</h4>
           <div className="exercise" id="spotcheck-2">
-            {/* your code here */}
+            {new Date().getHours() > 12
+              ? this.getEveningGreeting()
+              : this.getMorningGreeting()}
           </div>
         </div>
 
