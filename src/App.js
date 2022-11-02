@@ -15,10 +15,22 @@ class App extends Component {
   }
 
   showCompany(name, revenue) {
-    return (<div >{name} makes {revenue} every year</div>)
+    return (<div id={name}>{name} makes {revenue} every year</div>)
   }
 
-  getClassName(temperature) {}
+  getClassName(temperature) {
+    let className;
+    if(temperature < 15){
+      className = 'freezing';
+    }
+    else if(temperature > 15 && temperature < 30){
+      className = 'fair';
+    }
+    else{
+      className = 'hell-space';
+    }
+    return className;
+  }
 
   render() {
     let companies = [
@@ -62,7 +74,7 @@ class App extends Component {
         <div className="ex-space">
           <h4 className="ex-title">Exercise 2</h4>
           <div className="exercise" id="ex-2">
-            {/* your code here */}
+            {<div id="weatherBox" class={this.getClassName(10)}></div>}
           </div>
         </div>
       </div>
