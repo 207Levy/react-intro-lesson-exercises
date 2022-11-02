@@ -46,7 +46,7 @@ class App extends Component {
         <div className="ex-space">
           <h4 className="ex-title">Spot-check 3</h4>
           <div className="exercise" id="spotcheck-3">
-            {/* your code here */}
+            {[this.getMorningGreeting(), this.getEveningGreeting(),<p>paragraph</p>]}
           </div>
         </div>
 
