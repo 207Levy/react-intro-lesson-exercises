@@ -14,7 +14,9 @@ class App extends Component {
     return <div>Good Evening</div>;
   }
 
-  showCompany(name, revenue) {}
+  showCompany(name, revenue) {
+    return (<div >{name} makes {revenue} every year</div>)
+  }
 
   getClassName(temperature) {}
 
@@ -53,7 +55,7 @@ class App extends Component {
         <div className="ex-space">
           <h4 className="ex-title">Exercise 1</h4>
           <div className="exercise" id="ex-1">
-            {/* your code here */}
+            {companies.map(company => this.showCompany(company.name, company.revenue))}
           </div>
         </div>
 
